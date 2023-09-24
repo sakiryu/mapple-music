@@ -1,0 +1,297 @@
+/* media query - mobile & tablet */
+
+@media only screen and (max-width: 1100px) {
+
+/*new mobile classes */
+
+    .mobile-align-center {
+
+        align-items: center;
+    }
+
+    .mobile-text-center {
+        text-align: center;
+    }
+
+    .mobile-flex-col {
+        flex-direction: column;
+        display: flex;
+    }
+
+    .mobile-justify-center {
+        justify-content: center;
+    }
+
+    .mobile-col-reverse {
+        flex-flow: column-reverse;
+    }
+
+    .mobile-video {
+
+        width: 300px;
+        height: 200px;
+    }
+
+    .mobile-display {
+
+        display: none;
+    }
+
+    .global-pad-40 {
+        padding: 10px;
+    }
+
+
+    #menu-banner {
+
+        display: none;
+    }
+
+
+    #homepage>section.flex-col.m-bot-40>div.flex-row.gap-20.align-center.m-bot-40 {
+
+        flex-direction: column;
+    }
+
+    .gap-80 {
+
+        gap: 40px;
+    }
+
+    #rewards-card-1,
+    #rewards-card-2 {
+
+        gap: 20px;
+        padding: 40px;
+
+    }
+
+    .gift-image {
+        width: 40px;
+    }
+
+    .gap-40 {
+
+        gap: 20px;
+    }
+
+
+    #playlist-box {
+
+        margin-bottom: 40px;
+    }
+
+    .head-2,
+    .head-3,
+    .head-1 {
+
+        text-align: center;
+    }
+
+    #trend-cover {
+
+        height: max-content;
+        padding-top: 60px;
+        padding-bottom: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+        justify-content: unset;
+        margin-bottom: 60px;
+
+    }
+
+
+    #trend-artist-pic {
+        right: 0;
+        left: 0;
+        position: relative;
+        width: 75%;
+        margin-top: 80px;
+    }
+
+
+    #trend-col-left {
+
+        display: flex;
+        margin-bottom: 60px;
+
+    }
+
+    #trend-col-right {
+
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+    }
+
+
+    .global-pad-60 {
+        padding: 40px;
+    }
+
+
+    .m-bot-60 {
+        margin-bottom: 20px;
+    }
+
+    .m-bot-80 {
+        margin-bottom: 40px;
+    }
+
+
+    #main-content>section.flex-col.m-bot-40>div.flex-row.gap-40 {
+
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+    #settings-icon,
+    #bell-icon,
+    #hamburger-icon {
+
+        width: 30px;
+        height: 30px;
+        border-radius: 6px;
+    }
+
+    .icon-box-30 {
+        max-width: 15px;
+    }
+
+
+    #search-box, #trend-head, #player-box {
+        width: 100%;
+    }
+
+    #top-menu>div>div.flex-row.justify-center.align-center.gap-40 {
+
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    #main-content>section:nth-child(4)>div>div.flex-row.gap-40 {
+
+        gap: 40px;
+    }
+
+    #hamburger-icon {
+
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .mobile-nav {
+        height: 100vh;
+        width: 70%;
+        z-index: 2;
+        position: fixed;
+        display: block;
+    }
+
+
+    #nav-menu>div:nth-child(1)>div {
+
+        gap: 40px;
+    }
+
+    #nav-logo {
+        max-width: 160px;
+    }
+
+    #playlist-box>div.flex-row.align-center.space-between.m-bot-40,
+    #main-content>section.flex-col.m-bot-40>div.flex-row.gap-20.align-center.m-bot-40 {
+
+        gap: 10px;
+    }
+
+    #top-menu>div>div.flex-row.justify-center.align-center.gap-40>div.avatar-box.gap-20.flex-row.justify-center.align-center>img {
+
+        max-width: 50px;
+    }
+
+    .global-pad-80 {
+        padding: 40px 40px 40px 40px;
+    }
+
+
+    #modal-settings {
+        width: 90%;
+
+    }
+
+}
+
+
+/* media query - small laptop screens */
+
+@media only screen and (min-width: 1100px) and (max-width: 1300px) {
+
+
+    .global-pad-60 {
+        padding: 40px;
+    }
+
+
+    #search-box {
+        width: 50%;
+    }
+
+    #main-content>section.flex-col.m-bot-40>div.flex-row.gap-40>div>div>img,
+    #main-content>section.flex-col.m-bot-40>div.flex-row.gap-40>div>h4 {
+        width: 160px;
+    }
+
+    #main-content>section.flex-col.m-bot-40>div.flex-row.gap-40 {
+
+
+        gap: 0;
+        justify-content: space-between;
+    }
+
+
+    #nav-logo {
+        max-width: 160px;
+        margin-top: 60px;
+    }
+
+    #player-box {
+        max-width: 380px;
+    }
+
+    #player-and-recents {
+
+        gap: 40px;
+    }
+
+
+}
+
+/* media query - tablets */
+
+@media only screen and (min-width: 800px) and (max-width: 1100px) {}
+
+/* media query - only phones */
+
+@media only screen and (max-width: 495px) {
+
+    #artist-dot-box {
+
+        display: flex;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    #artist-box-2,
+    #artist-box-3,
+    #artist-box-4 {
+        display: none;
+    }
+
+    #artist-box-1 {
+
+        justify-content: center;
+    }
+
+}
