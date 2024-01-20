@@ -9,10 +9,15 @@
     <link rel="stylesheet" href="css/mediaqueries.css">
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    <!-- You actually can put your scripts at the top if you use "defer" -->
+    <script src="js/animation-scripts.js" defer></script>
+    <script src="js/music-scripts.js" defer></script>
+    <script src="js/display-scripts.js" defer></script>
+    <script src="js/navbar.js" async></script>
 </head>
 
 <body id="all">
-
     <div id="all-content" class="flex-row mobile-flex-col">
         <nav id="nav-menu" class="bg-white shadow pad-left-40 pad-right-40 flex-col mobile-display gap-200">
             <div>
@@ -103,7 +108,13 @@
                         </div>
                     </div>
                     <div class="flex-row justify-center align-center gap-40">
-                        <div id="hamburger-icon" class="bg-white shadow icon-box-50 rad-10 relative invisible pointer">
+                        
+                        <!-- Prefer to use onclick event (instead of addEventListener)
+                            when the element is intended to be a button -->
+                        <div
+                            onclick="openModal()"
+                            id="hamburger-icon"
+                            class="bg-white shadow icon-box-50 rad-10 relative invisible pointer">
                             <img class="absolute transform-center icon-box-30" src="assets/icons/hamburger.svg">
                         </div>
                         <div class="avatar-box gap-20 flex-row justify-center align-center">
@@ -114,6 +125,7 @@
                             </div>
                         </div>
 
+                        <!-- Avoid hardcoding svgs -->
                         <div class="flex-row gap-20">
                             <div id="bell-icon" class="bg-white shadow icon-box-50 rad-10 relative">
                                 <img class="absolute transform-center icon-box-30 pointer"
@@ -229,7 +241,6 @@
                                     </div>
                                 </div>
 
-
                                 <audio id="player-music" preload="metadata"
                                     src="assets/music/for-future-bass-159125.mp3"></audio>
 
@@ -249,7 +260,6 @@
 
                             </div>
                         </div>
-
 
                         <!-- recently played -->
                         <div id="playlist-box">
@@ -276,9 +286,7 @@
                                             <img src="assets/icons/plus.svg">
                                         </div>
                                         <p class="remark grey m-0"> 2:31</p>
-
                                     </div>
-
                                 </div>
 
                                 <div
@@ -299,9 +307,7 @@
                                             <img src="assets/icons/plus.svg">
                                         </div>
                                         <p class="remark grey m-0"> 2:31</p>
-
                                     </div>
-
                                 </div>
 
                                 <div
@@ -322,9 +328,7 @@
                                             <img src="assets/icons/plus.svg">
                                         </div>
                                         <p class="remark grey m-0"> 2:31</p>
-
                                     </div>
-
                                 </div>
 
                                 <div
@@ -391,18 +395,11 @@
                                             <img src="assets/icons/plus.svg">
                                         </div>
                                         <p class="remark grey m-0"> 2:31</p>
-
                                     </div>
-
                                 </div>
-
                             </div>
                         </div>
-
                     </div>
-
-
-
                 </section>
 
 
@@ -593,13 +590,8 @@
                 </div>
             </div>
         </modal>
-
-
     </div>
 
-    <script src="js/animation-scripts.js"> </script>
-    <script src="js/music-scripts.js"> </script>
-    <script src="js/display-scripts.js"> </script>
 
 </body>
 

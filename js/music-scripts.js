@@ -211,18 +211,21 @@ const shuffleButton = document.getElementById("shuffle");
 
 function shuffle() {
   let randomIndex;
-  
+
   do {
     randomIndex = Math.floor(Math.random() * songCollection.length);
   } while (randomIndex === currentSongIndex);
+
+  //You can use 'destructuring' to directly assign the propertoes of songCollection
+  const { src, name, artist, img } = songCollection[randomIndex];
+
+  playerMusic.src = src;
+  [currentSong.textContent, currentArtist.textContent] = [name, artist];
+  currentCover.src = img;
+  nextSongText.textContent = "Random";
   
-  const randomSong = songCollection[randomIndex];
-  playerMusic.src = randomSong.src; 
-  currentSong.textContent = randomSong.name
-  currentArtist.textContent = randomSong.artist
-  currentCover.src = randomSong.img
-  nextSongText.textContent = "Random"
   playAudio();
 }
+
 
 shuffleButton.addEventListener("click", shuffle);

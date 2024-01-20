@@ -1,39 +1,5 @@
-// Mobile nav menu -> show on hamburger icon click & hide on any other click
-
-const mobileMenu = document.getElementById("nav-menu");
-const hamburgerIcon = document.getElementById("hamburger-icon");
-
-let isModalOpen = false;
-
-function openModal() {
-  mobileMenu.classList.add("mobile-nav");
-  mobileMenu.classList.remove("mobile-display");
-  overlay.classList.remove("invisible");
-  isModalOpen = true;
-
-  document.addEventListener("click", closeModalOnClickOutside);
-}
-
-function closeModal() {
-  mobileMenu.classList.remove("mobile-nav");
-  mobileMenu.classList.add("mobile-display");
-  overlay.classList.add("invisible");
-  isModalOpen = false;
-
-  document.removeEventListener("click", closeModalOnClickOutside);
-}
-
-function closeModalOnClickOutside(e) {
-  if (!mobileMenu.contains(e.target) && e.target !== hamburgerIcon) {
-    closeModal();
-  }
-}
-
-hamburgerIcon.addEventListener("click", e => {
-  !isModalOpen ? openModal() : closeModal();
-});
-
-
+// This script file is quite big, and the bigger it gets, the harder it can be to maintain...
+// So maybe break it down into smaller script files? You could do that based on functionality. E.g. navbar.js
 
 // Upgrade banner -> show & hide modal & overlay on click
 const overlay = document.getElementById("overlay");
@@ -219,7 +185,6 @@ bellIconBox.addEventListener("mouseout", e => {
 // Show notifications modal 
 
 bellIconBox.addEventListener("click", e => {
-
   overlay.classList.remove("invisible")
   upgradeModal.classList.remove("invisible")
   pageBody.classList.add("overflow-hidden")
@@ -254,6 +219,7 @@ bellIconBox.addEventListener("click", e => {
 
 
 const plusIcons = document.querySelectorAll("#playlist-list > div > div:nth-child(2) > div > img");
+console.log("plusIcon: ", plusIcons)
 
 plusIcons.forEach((icon, index) => {
   icon.addEventListener("click", e => {
@@ -279,36 +245,29 @@ plusIcons.forEach((icon, index) => {
 function addEntryToPlaylistPage(songTitle, artistName, coverSrc) {
   const playlistCollection = document.getElementById("playlist-collection");
 
-  fetch("../playlist-entry.template.html")
-  .then(html => html.text())
-  .then(html => {
-    const newEntry = document.createElement("div");
-    newEntry.classList.add(
-      "pad-left-20", "pad-right-20", "bg-white", "flex-row", "align-center",
-      "shadow", "pad-top-bottom-10", "full-width", "rad-8", "space-between"
-    );
+  const newEntry = document.createElement("div");
+  newEntry.classList.add(
+    "pad-left-20", "pad-right-20", "bg-white", "flex-row", "align-center",
+    "shadow", "pad-top-bottom-10", "full-width", "rad-8", "space-between"
+  );
   
-    newEntry.innerHTML = html;
-    console.log("test")
-    playlistCollection.appendChild(newEntry);
-  });
-  // newEntry.innerHTML = `
-  //   <div class="flex-row gap-20 align-center">
-  //     <div class="align-center relative pointer">
-  //       <img class="icon-box-40 rad-6" src="${coverSrc}">
-  //     </div>
-  //     <div class="flex-col">
-  //       <p class="regular-text black m-bot-2 bold">${songTitle}</p>
-  //       <p class="remark grey m-0">${artistName}</p>
-  //     </div>
-  //   </div>`;
+  // Ideally this html wouldn't be hardcoded, but placed into
+  // its own component instead. Since this is client-sided JavaScript though,
+  // here it shall stay.
+  const playlistEntry = 
+  `<div class="flex-row gap-20 align-center">
+      <div class="align-center relative pointer">
+        <img class="icon-box-40 rad-6" src="${coverSrc}">
+      </div>
+      <div class="flex-col">
+        <p class="regular-text black m-bot-2 bold">${songTitle}</p>
+        <p class="remark grey m-0">${artistName}</p>
+      </div>
+    </div>`;
 
+  newEntry.innerHTML = playlistEntry;
+  playlistCollection.appendChild(newEntry);
 }
-
-
-
-
-
 
 // Artist box slider
 const artistDots = [
@@ -414,17 +373,37 @@ playlistContainer.classList.remove("darken")
 
     // redeem links
 
-    const redeemLinks = Array.from(document.getElementsByClassName("redeem"))
-    redeemLinks.forEach((link) => {
-      link.addEventListener("click", e => {
-        link.parentNode.parentNode.classList.add("no-display")
-        favoritesNotification.classList.remove("invisible");
-        favoritesNotificationText.textContent = "Points redeemed";
-        setTimeout(() => {
-          favoritesNotification.classList.add("invisible");
-        }, 1000);
-      })
-    })
+    // const redeemLinks = Array.from(document.getElementsByClassName("redeem"))
+    // redeemLinks.forEach((link) => {
+    //   link.addEventListener("click", e => {
+    //     link.parentNode.parentNode.classList.add("no-display")
+    //     favoritesNotification.classList.remove("invisible");
+    //     favoritesNotificationText.textContent = "Points redeemed";
+    //     setTimeout(() => {
+    //       favoritesNotification.classList.add("invisible");
+    //     }, 1000);
+    //   })
+    // })
+
+    // The above can be broken down into separate functions, which
+    // can improve readability 
+    const redeemLinks = document.querySelectorAll(".redeem");
+
+    const hideParent = (element) => {
+      element.parentNode.parentNode.classList.add("no-display");
+    };
+
+    const handleRedeemClick = (event) => {
+      const clickedLink = event.currentTarget;
+      hideParent(clickedLink);
+
+      // There is already a function implemented for showing notifications,
+      // So don't "repeat yourself" by implementing the same functionality twice :)
+      showNotification("Points redeemed");
+    };
+
+    redeemLinks.forEach(link => link.addEventListener("click", handleRedeemClick));
+
   
 
     // Populate playlist page
