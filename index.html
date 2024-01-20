@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapple Music - Home </title>
     <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.svg">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaqueries.css">
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 </head>
@@ -19,122 +19,42 @@
                 <img id="nav-logo" class="m-bot-80" src="./assets/icons/logo.svg">
                 <div class="gap-40 flex-col">
                     <div id="home-container" class="flex-row gap-20 align-center darken ">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-                            <path
-                                d="M15.0001 22.4998V18.7498M12.5876 3.52481L3.92509 10.4623C2.95009 11.2373 2.32509 12.8748 2.53759 14.0998L4.20009 24.0498C4.50009 25.8248 6.20009 27.2623 8.00009 27.2623H22.0001C23.7876 27.2623 25.5001 25.8123 25.8001 24.0498L27.4626 14.0998C27.6626 12.8748 27.0376 11.2373 26.0751 10.4623L17.4126 3.53731C16.0751 2.46231 13.9126 2.46231 12.5876 3.52481Z"
-                                stroke="#8E8E8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                        <img src="assets/icons/home.svg" width="30" height="30" />
                         <p id="home-link" class="regular-text grey pointer"> Home </p>
                     </div>
 
                     <div id="playlist-container" class="flex-row gap-20 align-center ">
-                        <svg id="playlists" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                            viewBox="0 0 30 30" fill="none">
-                            <path
-                                d="M7.84995 27.5002C8.8843 27.5002 9.87628 27.0893 10.6077 26.3579C11.3391 25.6265 11.75 24.6345 11.75 23.6002C11.75 22.5658 11.3391 21.5739 10.6077 20.8425C9.87628 20.1111 8.8843 19.7002 7.84995 19.7002C6.81561 19.7002 5.82363 20.1111 5.09223 20.8425C4.36084 21.5739 3.94995 22.5658 3.94995 23.6002C3.94995 24.6345 4.36084 25.6265 5.09223 26.3579C5.82363 27.0893 6.81561 27.5002 7.84995 27.5002Z"
-                                stroke="#8E8E8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M26.0502 20.9999V5.74993C26.0502 2.49993 24.0127 2.04993 21.9502 2.61243L14.1502 4.73743C12.7252 5.12493 11.7502 6.24993 11.7502 7.87493V23.5874"
-                                stroke="#8E8E8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M11.7502 11.9L26.0502 8M22.1502 24.9C23.1846 24.9 24.1766 24.4891 24.908 23.7577C25.6394 23.0263 26.0502 22.0343 26.0502 21C26.0502 19.9657 25.6394 18.9737 24.908 18.2423C24.1766 17.5109 23.1846 17.1 22.1502 17.1C21.1159 17.1 20.1239 17.5109 19.3925 18.2423C18.6611 18.9737 18.2502 19.9657 18.2502 21C18.2502 22.0343 18.6611 23.0263 19.3925 23.7577C20.1239 24.4891 21.1159 24.9 22.1502 24.9Z"
-                                stroke="#8E8E8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                        <img src="assets/icons/playlist.svg" width="30" height="30" />
                         <p id="playlist-link" class="regular-text grey pointer"> Playlists </p>
                     </div>
 
                     <div id="rewards-container" class="flex-row gap-20 align-center ">
-                        <svg id="rewards" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
-                            fill="none">
-                            <path d="M15.1875 20.625V23.25" stroke="#8E8E8E" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M8.9375 27.5H21.4375V26.25C21.4375 24.875 20.3125 23.75 18.9375 23.75H11.4375C10.0625 23.75 8.9375 24.875 8.9375 26.25V27.5Z"
-                                stroke="#8E8E8E" stroke-width="1.5" stroke-miterlimit="10" />
-                            <path
-                                d="M7.6875 27.5H22.6875M15 20C10.1625 20 6.25 16.0875 6.25 11.25V7.5C6.25 4.7375 8.4875 2.5 11.25 2.5H18.75C21.5125 2.5 23.75 4.7375 23.75 7.5V11.25C23.75 16.0875 19.8375 20 15 20Z"
-                                stroke="#8E8E8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M6.83755 14.5625C5.90005 14.2625 5.07505 13.7125 4.42505 13.0625C3.30005 11.8125 2.55005 10.3125 2.55005 8.5625C2.55005 6.8125 3.92505 5.4375 5.67505 5.4375H6.48755C6.23755 6.0125 6.11255 6.65 6.11255 7.3125V11.0625C6.11255 12.3125 6.37505 13.4875 6.83755 14.5625ZM23.1626 14.5625C24.1001 14.2625 24.925 13.7125 25.575 13.0625C26.7 11.8125 27.45 10.3125 27.45 8.5625C27.45 6.8125 26.075 5.4375 24.325 5.4375H23.5125C23.7625 6.0125 23.8875 6.65 23.8875 7.3125V11.0625C23.8875 12.3125 23.6251 13.4875 23.1626 14.5625Z"
-                                stroke="#8E8E8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-
+                        <img src="assets/icons/reward.svg" width="30" height="30" />
                         <p id="rewards-link" class="regular-text grey pointer"> Rewards </p>
                     </div>
                     
                     <div id="video-container" class="flex-row gap-20 align-center ">
-                        <svg id="clips" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
-                            fill="none">
-                            <path
-                                d="M15.6623 25.5251H7.76226C3.81226 25.5251 2.49976 22.9001 2.49976 20.2626V9.7376C2.49976 5.7876 3.81226 4.4751 7.76226 4.4751H15.6623C19.6123 4.4751 20.9248 5.7876 20.9248 9.7376V20.2626C20.9248 24.2126 19.5998 25.5251 15.6623 25.5251Z"
-                                stroke="#8E8E8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M24.4002 21.3752L20.9252 18.9377V11.0502L24.4002 8.61266C26.1002 7.42516 27.5002 8.15016 27.5002 10.2377V19.7627C27.5002 21.8502 26.1002 22.5752 24.4002 21.3752ZM14.3752 13.7502C14.8725 13.7502 15.3494 13.5526 15.7011 13.201C16.0527 12.8494 16.2502 12.3724 16.2502 11.8752C16.2502 11.3779 16.0527 10.901 15.7011 10.5493C15.3494 10.1977 14.8725 10.0002 14.3752 10.0002C13.878 10.0002 13.401 10.1977 13.0494 10.5493C12.6978 10.901 12.5002 11.3779 12.5002 11.8752C12.5002 12.3724 12.6978 12.8494 13.0494 13.201C13.401 13.5526 13.878 13.7502 14.3752 13.7502Z"
-                                stroke="#8E8E8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                        <img src="assets/icons/video.svg" width="30" height="30" />
                         <p id="videos-link" class="regular-text grey pointer"> Video clips </p>
                     </div>
 
                     <div class="flex-row gap-20 align-center ">
-                        <svg id="downloads" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                            viewBox="0 0 30 30" fill="none">
-                            <path
-                                d="M27.4998 13.75V21.25C27.4998 26.25 26.2498 27.5 21.2498 27.5H8.74976C3.74976 27.5 2.49976 26.25 2.49976 21.25V8.75C2.49976 3.75 3.74976 2.5 8.74976 2.5H10.6248C12.4998 2.5 12.9123 3.05 13.6248 4L15.4998 6.5C15.9748 7.125 16.2498 7.5 17.4998 7.5H21.2498C26.2498 7.5 27.4998 8.75 27.4998 13.75Z"
-                                stroke="#8E8E8E" stroke-width="1.5" stroke-miterlimit="10" />
-                        </svg>
+                        <img src="assets/icons/download.svg" width="30" height="30" />
                         <p class="regular-text grey pointer"> Downloads </p>
                     </div>
 
-
                     <div class="flex-row gap-20 align-center ">
-                        <svg id="trending" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
-                            fill="none">
-                            <path
-                                d="M7.49976 5.625H22.4998M11.2498 2.5H18.7498M21.2498 27.5H8.74976C4.99976 27.5 2.49976 25.625 2.49976 21.25V15C2.49976 10.625 4.99976 8.75 8.74976 8.75H21.2498C24.9998 8.75 27.4998 10.625 27.4998 15V21.25C27.4998 25.625 24.9998 27.5 21.2498 27.5Z"
-                                stroke="#8E8E8E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M11.1124 23.8874C11.5666 23.8874 12.0022 23.707 12.3233 23.3858C12.6445 23.0647 12.8249 22.6291 12.8249 22.1749C12.8249 21.7207 12.6445 21.2851 12.3233 20.964C12.0022 20.6428 11.5666 20.4624 11.1124 20.4624C10.6582 20.4624 10.2226 20.6428 9.90148 20.964C9.58033 21.2851 9.3999 21.7207 9.3999 22.1749C9.3999 22.6291 9.58033 23.0647 9.90148 23.3858C10.2226 23.707 10.6582 23.8874 11.1124 23.8874Z"
-                                stroke="#8E8E8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M19.0997 21.0375V14.35C19.0997 12.925 18.2122 12.725 17.2997 12.975L13.8747 13.9125C13.2497 14.0875 12.8247 14.575 12.8247 15.2875V22.175"
-                                stroke="#8E8E8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M12.8247 17.2877L19.0997 15.5752M17.3872 22.7502C17.8414 22.7502 18.277 22.5698 18.5981 22.2486C18.9193 21.9275 19.0997 21.4919 19.0997 21.0377C19.0997 20.5835 18.9193 20.1479 18.5981 19.8268C18.277 19.5056 17.8414 19.3252 17.3872 19.3252C16.933 19.3252 16.4974 19.5056 16.1763 19.8268C15.8551 20.1479 15.6747 20.5835 15.6747 21.0377C15.6747 21.4919 15.8551 21.9275 16.1763 22.2486C16.4974 22.5698 16.933 22.7502 17.3872 22.7502Z"
-                                stroke="#8E8E8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                        <img src="assets/icons/trend.svg" width="30" height="30" />
                         <p class="regular-text grey pointer"> Trending </p>
                     </div>
 
-
                     <div class="flex-row gap-20 align-center ">
-                        <svg id="online" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
-                            fill="none">
-                            <path
-                                d="M14.9998 27.5C21.9035 27.5 27.4998 21.9037 27.4998 15C27.4998 8.09625 21.9035 2.5 14.9998 2.5C8.09601 2.5 2.49976 8.09625 2.49976 15C2.49976 21.9037 8.09601 27.5 14.9998 27.5Z"
-                                stroke="#8E8E8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M9.99997 3.75H11.25C8.81251 11.052 8.81251 18.948 11.25 26.25H9.99997M18.75 3.75C21.1874 11.052 21.1874 18.948 18.75 26.25"
-                                stroke="#8E8E8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M3.75 20V18.75C11.052 21.1874 18.948 21.1874 26.25 18.75V20M3.75 11.25C11.052 8.81251 18.948 8.81251 26.25 11.25"
-                                stroke="#8E8E8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                        <img src="assets/icons/online.svg" width="30" height="30" />
                         <p class="regular-text grey pointer"> Online mode </p>
                     </div>
 
                     <div class="flex-row gap-20 align-center ">
-                        <svg id="settings" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
-                            fill="none">
-                            <path
-                                d="M15 18.75C15.9946 18.75 16.9484 18.3549 17.6517 17.6517C18.3549 16.9484 18.75 15.9946 18.75 15C18.75 14.0054 18.3549 13.0516 17.6517 12.3483C16.9484 11.6451 15.9946 11.25 15 11.25C14.0054 11.25 13.0516 11.6451 12.3483 12.3483C11.6451 13.0516 11.25 14.0054 11.25 15C11.25 15.9946 11.6451 16.9484 12.3483 17.6517C13.0516 18.3549 14.0054 18.75 15 18.75Z"
-                                stroke="#8E8E8E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M2.49976 16.0998V13.8998C2.49976 12.5998 3.56226 11.5248 4.87476 11.5248C7.13726 11.5248 8.06226 9.9248 6.92476 7.9623C6.27476 6.8373 6.66226 5.3748 7.79976 4.7248L9.96225 3.4873C10.9498 2.8998 12.2248 3.2498 12.8123 4.2373L12.9498 4.4748C14.0748 6.4373 15.9248 6.4373 17.0623 4.4748L17.1998 4.2373C17.7873 3.2498 19.0623 2.8998 20.0498 3.4873L22.2123 4.7248C23.3498 5.3748 23.7373 6.8373 23.0873 7.9623C21.9498 9.9248 22.8748 11.5248 25.1373 11.5248C26.4373 11.5248 27.5123 12.5873 27.5123 13.8998V16.0998C27.5123 17.3998 26.4498 18.4748 25.1373 18.4748C22.8748 18.4748 21.9498 20.0748 23.0873 22.0373C23.7373 23.1748 23.3498 24.6248 22.2123 25.2748L20.0498 26.5123C19.0623 27.0998 17.7873 26.7498 17.1998 25.7623L17.0623 25.5248C15.9373 23.5623 14.0873 23.5623 12.9498 25.5248L12.8123 25.7623C12.2248 26.7498 10.9498 27.0998 9.96225 26.5123L7.79976 25.2748C7.25488 24.9611 6.85673 24.444 6.69269 23.837C6.52864 23.23 6.6121 22.5828 6.92476 22.0373C8.06226 20.0748 7.13726 18.4748 4.87476 18.4748C3.56226 18.4748 2.49976 17.3998 2.49976 16.0998Z"
-                                stroke="#8E8E8E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
+                        <img src="assets/icons/settings.svg" width="30" height="30" />
                         <p class="regular-text grey pointer"> Settings </p>
                     </div>
                 </div>
@@ -196,28 +116,13 @@
 
                         <div class="flex-row gap-20">
                             <div id="bell-icon" class="bg-white shadow icon-box-50 rad-10 relative">
-                                <svg class="absolute transform-center icon-box-30 pointer"
-                                    xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
-                                    fill="none">
-                                    <path
-                                        d="M14.9996 8.05024V12.2127M15.0246 2.50024C10.4246 2.50024 6.69963 6.22524 6.69963 10.8252V13.4502C6.69963 14.3002 6.34963 15.5752 5.91213 16.3002L4.32463 18.9502C3.34963 20.5877 4.02463 22.4127 5.82463 23.0127C11.8012 25.0002 18.2605 25.0002 24.2371 23.0127C24.6315 22.8812 24.9913 22.6627 25.2899 22.3734C25.5884 22.0842 25.8182 21.7315 25.9622 21.3415C26.1062 20.9515 26.1608 20.5342 26.1218 20.1203C26.0828 19.7064 25.9514 19.3065 25.7371 18.9502L24.1496 16.3002C23.7121 15.5752 23.3621 14.2877 23.3621 13.4502V10.8252C23.3496 6.25024 19.5996 2.50024 15.0246 2.50024Z"
-                                        stroke="#8E8E8E" stroke-width="1.5" stroke-miterlimit="10"
-                                        stroke-linecap="round" />
-                                    <path
-                                        d="M19.1624 23.5254C19.1624 25.8129 17.2874 27.6879 14.9999 27.6879C13.8624 27.6879 12.8124 27.2129 12.0624 26.4629C11.3124 25.7129 10.8374 24.6629 10.8374 23.5254"
-                                        stroke="#8E8E8E" stroke-width="1.5" stroke-miterlimit="10" />
-                                </svg>
+                                <img class="absolute transform-center icon-box-30 pointer"
+                                    src="assets/icons/bell.svg" width="30" height="30" />
                             </div>
 
                             <div id="settings-icon" class="bg-white shadow icon-box-50 rad-10 relative">
-                                <svg class="absolute transform-center icon-box-30 pointer"
-                                    xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
-                                    fill="none">
-                                    <path
-                                        d="M23.75 27.5V13.75M23.75 8.75V2.5M15 27.5V21.25M15 16.25V2.5M6.25 27.5V13.75M6.25 8.75V2.5M3.75 13.75H8.75M21.25 13.75H26.25M12.5 16.25H17.5"
-                                        stroke="#8E8E8E" stroke-width="1.5" stroke-miterlimit="10"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
+                                <img class="absolute transform-center icon-box-30 pointer"
+                                src="assets/icons/tune.svg" width="30" height="30" />
                             </div>
                         </div>
 
@@ -250,20 +155,15 @@
 
                         <div id="artist-box-2" class="flex-col m-bot-20">
                             <div class="relative m-bot-20">
-
                                 <img class="rad-10 shadow" src="assets/pictures/pain.png">
-
                                 <div
                                     class=" justify-center like-box bg-blue icon-box-40 absolute rad-6 align-center flex-row">
                                     <img class="icon-box-20 pointer heart-icon" src="assets/icons/like.svg">
                                 </div>
                             </div>
-
                             <h4 class="head-3 black m-bot-2 mobile-text-center"> Pain</h4>
                             <p class="remark grey mobile-text-center"> Ryan Jones </p>
-
                         </div>
-
 
                         <div id="artist-box-3" class="flex-col m-bot-20 ">
                             <div class="relative m-bot-20">
@@ -273,12 +173,9 @@
                                     <img class="icon-box-20 pointer heart-icon" src="assets/icons/like.svg">
                                 </div>
                             </div>
-
                             <h4 class="head-3 black m-bot-2 mobile-text-center"> Raising the beats</h4>
                             <p class="remark grey mobile-text-center"> Devil’s Gun </p>
-
                         </div>
-
 
                         <div id="artist-box-4" class="flex-col m-bot-20">
                             <div class="relative m-bot-20">
@@ -295,18 +192,13 @@
                         </div>
                     </div>
 
-
                     <div id="artist-dot-box" class="flex-row gap-40 mobile-display">
                         <div id="artist-dot-1" class="bg-blue banner-dot shadow pointer"></div>
                         <div id="artist-dot-2" class="bg-grey banner-dot shadow pointer"></div>
                         <div id="artist-dot-3" class="bg-grey banner-dot shadow pointer"></div>
                         <div id="artist-dot-4" class="bg-grey banner-dot shadow pointer"></div>
                     </div>
-
-
-
                 </section>
-
 
                 <!-- player & recents -->
                 <section>
@@ -705,9 +597,9 @@
 
     </div>
 
-    <script src="animation-scripts.js"> </script>
-    <script src="music-scripts.js"> </script>
-    <script src="display-scripts.js"> </script>
+    <script src="js/animation-scripts.js"> </script>
+    <script src="js/music-scripts.js"> </script>
+    <script src="js/display-scripts.js"> </script>
 
 </body>
 
